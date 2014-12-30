@@ -9,3 +9,4 @@ def index():
 def data():
     obj={'name':"aa",'youjianyingxiao':'[120, 132, 101, 134, 90000, 230, 210]'}
     return json.dumps(obj)
+
