@@ -10,10 +10,11 @@ def index():
 def data():
     obj={'name':"aa",'youjianyingxiao':'[120, 132, 101, 134, 90000, 230, 210]'}
     return json.dumps(obj)
+<<<<<<< HEAD
+
+=======
 @app.route('/form')
 def form():
     form = MyForm()
     return render_template('submit.html',form=form)
-@app.route('/bootstrap')
-def bootstrap():
-    return render_template("bootstrap.html")
+>>>>>>> 76ef9761d65e0afd5af3200c07a746e3363d2d41
