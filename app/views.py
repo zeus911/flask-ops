@@ -40,7 +40,7 @@ def login():
 
 @app.route('/about')
 def about():
-    ret=saltclient.cmd('SC','cmd.run',['df -h',])
+    ret=saltclient.cmd('SC','grains.items',['-v'])
     return render_template('pages/placeholder.about.html',ret=ret)
 
 @app.route('/register')
