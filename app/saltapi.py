@@ -2,8 +2,8 @@ import urllib3,json
 import sys
 
 URL="localhost:8000/login"
-USER="adefyer"
-PASSWORD='112358'
+USER=""
+PASSWORD=''
 
 class SaltRestFul(object):
     def __init__(self):
@@ -29,7 +29,7 @@ class SaltRestFul(object):
 
         return result
     def Run(self,client,tgt,fun,arg):
-        data   =  [{"client":client,"tgt":tgt,"fun":fun,"arg":arg,"username":"adefyer","password":"112358","eauth":"pam"}]
+        data   =  [{"client":client,"tgt":tgt,"fun":fun,"arg":arg,"username":"","password":"","eauth":"pam"}]
         dataj  = json.dumps(data,allow_nan=True)
         r     = self.http.urlopen(method="POST",url="localhost:8000/run",headers=self.requestHeader,body=dataj)
         return r.data 
